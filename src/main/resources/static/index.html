@@ -27,8 +27,7 @@
     angular.module("app", []).controller("home", function ($http) {
         var self = this;
         $http.get("/user").success(function (data) {
-            console.log(data);
-            self.user = data.userAuthentication.details.name;
+            //self.user = data.details.name;
             self.authenticated = true;
         }).error(function () {
             self.user = "N/A";
